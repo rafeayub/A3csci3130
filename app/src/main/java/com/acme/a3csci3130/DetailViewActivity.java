@@ -35,23 +35,22 @@ public class DetailViewActivity extends Activity {
     }
 
     public void updateBusiness(View v){
-        String uid= receivedBusinessInfo.uid;
-        String num =  numField.getText().toString();
-        String name = nameField.getText().toString();
-        String type = typeField.getText().toString();
-        String address = addressField.getText().toString();
-        String province = provinceField.getText().toString();
 
-        Business business = new Business(uid, num, name, type, address, province);
+        //set all values of currently selected business to whatever user types in fields
+        receivedBusinessInfo.num =  numField.getText().toString();
+        receivedBusinessInfo.name = nameField.getText().toString();
+        receivedBusinessInfo.type = typeField.getText().toString();
+        receivedBusinessInfo.address = addressField.getText().toString();
+        receivedBusinessInfo.province = provinceField.getText().toString();
 
-        appState.firebaseReference.child(receivedBusinessInfo.uid).setValue(receivedBusinessInfo);
+        appState.firebaseReference.child(receivedBusinessInfo.uid).setValue(receivedBusinessInfo); //update selected business in firebase
 
         finish();
     }
 
     public void eraseBusiness(View v)
     {
-        appState.firebaseReference.child(receivedBusinessInfo.uid).removeValue();
+        appState.firebaseReference.child(receivedBusinessInfo.uid).removeValue(); //remove the business with the selected uid
 
         finish();
     }

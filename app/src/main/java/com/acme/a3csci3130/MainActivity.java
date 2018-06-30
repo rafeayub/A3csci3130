@@ -27,13 +27,13 @@ public class MainActivity extends Activity {
 
         //Set-up Firebase
         appData.firebaseDBInstance = FirebaseDatabase.getInstance();
-        appData.firebaseReference = appData.firebaseDBInstance.getReference("businesses");
+        appData.firebaseReference = appData.firebaseDBInstance.getReference("business");//changes from bussinesses
 
         //Get the reference to the UI contents
         businessListView = (ListView) findViewById(R.id.listView);
 
         //Set up the List View
-       firebaseAdapter = new FirebaseListAdapter<Business>(this, Business.class,
+        firebaseAdapter = new FirebaseListAdapter<Business>(this, Business.class,
                 android.R.layout.simple_list_item_1, appData.firebaseReference) {
             @Override
             protected void populateView(View v, Business model, int position) {
@@ -46,8 +46,8 @@ public class MainActivity extends Activity {
             // onItemClick method is called everytime a user clicks an item on the list
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Business person = (Business) firebaseAdapter.getItem(position);
-                showDetailView(person);
+                Business business = (Business) firebaseAdapter.getItem(position);
+                showDetailView(business);
             }
         });
     }
@@ -58,13 +58,10 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    private void showDetailView(Business person)
+    private void showDetailView(Business business)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);
-        intent.putExtra("Business", person);
+        intent.putExtra("Business", business);
         startActivity(intent);
     }
-
-
-
 }

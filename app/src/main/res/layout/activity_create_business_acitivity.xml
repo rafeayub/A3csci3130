@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.acme.a3csci3130.CreateContactAcitivity">
+    tools:context="com.acme.a3csci3130.CreateBusinessAcitivity">
 
     <EditText
         android:id="@+id/province"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:hint="Province or Territory"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/address" />
@@ -20,8 +20,8 @@
         android:id="@+id/address"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:hint="Address"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type" />
@@ -30,8 +30,8 @@
         android:id="@+id/type"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:hint="Primary Bussiness"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -40,8 +40,8 @@
         android:id="@+id/num"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:hint="Number"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,8 +50,8 @@
         android:id="@+id/name"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
         android:hint="Name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num" />
@@ -61,10 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="28dp"
         android:onClick="submitInfoButton"
-        android:text="Create Contact"
+        android:text="Create Business"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintHorizontal_bias="0.96"

@@ -36,9 +36,9 @@ public class CreateBusinessAcitivity extends Activity {
         String address = addressField.getText().toString();
         String province = provinceField.getText().toString();
 
-        Business business = new Business(uid, num, name, type, address, province);
+        Business business = new Business(uid, num, name, type, address, province); //create new business
 
-        appState.firebaseReference.child(uid).setValue(business);
+        appState.firebaseReference.child(uid).setValue(business); //upload business to firebase
 
         finish();
 
